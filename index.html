@@ -80,17 +80,22 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
-
-	  window.addEventListener("onEmbeddedMessagingReady", e => {
+	  //Passing Web Context to Prechat - BEGIN
+    var sFirstName = "John";
+    var sLastName = "Doe";
+    var sSubject = "Test Subject";
+    var sCustomerID = "12345678";
+    var sShoppingCartValue = "1000";
+        
+    window.addEventListener("onEmbeddedMessagingReady", e => {
         //log event
         console.log("onEmbeddedMessagingReady event triggered");
         
-        
-      
+    
         //Set invisible prechat field
         embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-            "Shopping_Cart_Value" : "test",
-            "Customer_ID" : "test456"
+            "Shopping_Cart_Value" : sShoppingCartValue,
+            "Customer_ID" : sCustomerID
         });
     });
     //Passing Web Context to Prechat - END
