@@ -80,6 +80,18 @@
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
+
+	  window.addEventListener("onEmbeddedMessagingReady", e => {
+        //log event
+        console.log("onEmbeddedMessagingReady event triggered");
+      
+        //Set invisible prechat field
+        embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
+            "Customer_ID" : '62tywgsgyta',
+            "Shopping_Cart_Value" : '$365'
+        });
+    });
+    //Passing Web Context to Prechat - END
 </script>
 <script type='text/javascript' src='https://orgfarm-36880e317e-dev-ed.develop.my.site.com/ESWServiceAgentDeployme1738665446999/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
