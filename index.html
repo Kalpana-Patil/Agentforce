@@ -84,11 +84,13 @@
 	  window.addEventListener("onEmbeddedMessagingReady", e => {
         //log event
         console.log("onEmbeddedMessagingReady event triggered");
+        
+        
       
         //Set invisible prechat field
         embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
-            "Customer_ID" : "62tywgsgyta",
-            "Shopping_Cart_Value" : "$365"
+            "Shopping_Cart_Value" : "test123",
+            "Customer_ID" : "test456"
         });
     });
     //Passing Web Context to Prechat - END
